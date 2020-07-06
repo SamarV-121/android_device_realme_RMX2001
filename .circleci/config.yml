@@ -1,0 +1,34 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: fr3akyphantom/droid-builder:latest
+    environment:
+      MANIFEST_BRANCH: 'android-9.0'
+      #PBRP_BRANCH: 'pbrp'
+      VERSION: '2.9.1'
+      MAINTAINER: "PBRP TEAM"
+      VENDOR: 'realme'
+      CODENAME: 'RMX2001'
+      #FLAVOR: 'eng'
+      BUILD_LUNCH: 'omni_RMX2001-eng'
+      #PB_OFFICIAL: 'true'
+      TEST_BUILD: 'true'
+      CHANGELOG: |
+        - initial build
+    working_directory: /home/builder/pitchblack
+    steps:
+      - run:
+          name: AIO Build
+          command: |
+            wget -q https://raw.githubusercontent.com/PitchBlackRecoveryProject/vendor_pb/pb/build.sh
+            source build.sh
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: 'android-9.0'
+          context: org-global 
