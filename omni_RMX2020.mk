@@ -15,17 +15,17 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := RMX2001
+PRODUCT_RELEASE_NAME := RMX2020
 $(call inherit-product, build/target/product/embedded.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/pb/config/common.mk)
+$(call inherit-product, vendor/omni/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := RMX2001
-PRODUCT_NAME := omni_RMX2001
+PRODUCT_DEVICE := RMX2020
+PRODUCT_NAME := omni_RMX2020
 PRODUCT_BRAND := realme
-PRODUCT_MODEL := Realme 6
+PRODUCT_MODEL := Realme C3
 PRODUCT_MANUFACTURER := realme
 
 # HACK: Set vendor patch level
