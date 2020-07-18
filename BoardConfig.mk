@@ -16,6 +16,9 @@
 
 DEVICE_PATH := device/realme/RMX2020
 
+# For building with minimal manifest
+ALLOW_MISSING_DEPENDENCIES := true
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -87,10 +90,6 @@ TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/fstab.mt6768
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
-
-# Crypto
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_FBE := true
 
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
