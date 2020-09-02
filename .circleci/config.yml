@@ -31,11 +31,9 @@ jobs:
            source build/envsetup.sh
            lunch omni_${DEVICE}-eng
            mka recoveryimage -j$(nproc --all)
-           export BUILDFILE=$(find $(pwd)/out/target/product/${DEVICE}/PitchBlack*.zip 2>/dev/null)
            export BUILDFILE_IMG=$(find $(pwd)/out/target/product/${DEVICE}/recovery.img 2>/dev/null)
            export UPLOAD_PATH=$(pwd)/out/target/product/${DEVICE}/upload/
            mkdir ${UPLOAD_PATH}
-           cp $BUILDFILE $UPLOAD_PATH
            cp $BUILDFILE_IMG $UPLOAD_PATH
            ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -n "Latest Release for $(echo $DEVICE)" -b "PBRP $(echo $VERSION)" -c ${CIRCLE_SHA1} -delete ${VERSION} ${UPLOAD_PATH}
 workflows:
