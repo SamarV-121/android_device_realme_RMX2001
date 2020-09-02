@@ -16,15 +16,16 @@
 
 # Release name
 PRODUCT_RELEASE_NAME := RMX2020
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+$(call inherit-product, build/target/product/embedded.mk)
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/pb/config/common.mk)
 
+# Enable updating of APEXes
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
-PRODUCT_BUILD_SUPER_PARTITION := false
+#PRODUCT_BUILD_SUPER_PARTITION := false
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := RMX2020
@@ -32,10 +33,6 @@ PRODUCT_NAME := omni_RMX2020
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme C3
 PRODUCT_MANUFACTURER := realme
-
-# fastbootd
-PRODUCT_PACKAGES += \
-    fastbootd
 
 # HACK: Set vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \
