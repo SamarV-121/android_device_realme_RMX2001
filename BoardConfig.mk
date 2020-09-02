@@ -99,9 +99,7 @@ TW_INCLUDE_FBE := true
 BOARD_SUPER_PARTITION_SIZE := 6685720576
 BOARD_SUPER_PARTITION_GROUPS := realme
 BOARD_REALME_SIZE := 6685720576
-BOARD_REALME_PARTITION_LIST := \
-    system \
-    vendor
+BOARD_REALME_PARTITION_LIST := system vendor oppo_product oppo_engineering common_preload
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
