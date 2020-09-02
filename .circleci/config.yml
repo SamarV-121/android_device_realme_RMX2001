@@ -21,7 +21,7 @@ jobs:
            go get -u github.com/tcnksm/ghr
            export PATH=/root/go/bin:$PATH
            git config --global user.email "${GIT_EMAIL}"
-           git config --global user.name "{GIT_NAME}"
+           git config --global user.name "${GIT_NAME}"
            git config --global color.ui false
            repo init --depth=1 -u git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b ${PBRP_MANIFEST}
            repo sync -j$(nproc --all) --force-sync --no-tags --no-clone-bundle --prune --optimized-fetch
