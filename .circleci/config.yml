@@ -9,7 +9,7 @@ jobs:
       VERSION: '3.0.0'
       PBRP_MANIFEST: 'android-9.0'
       VENDOR: 'realme'
-      DEVICE: 'RMX2020'
+      DEVICE: 'rmx2020'
    steps:
       - run:
           command: |

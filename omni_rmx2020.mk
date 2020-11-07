@@ -15,7 +15,7 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := RMX2020
+PRODUCT_RELEASE_NAME := rmx2020
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
@@ -24,8 +24,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, vendor/pb/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := RMX2020
-PRODUCT_NAME := omni_RMX2020
+PRODUCT_DEVICE := rmx2020
+PRODUCT_NAME := omni_rmx2020
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme C3
 PRODUCT_MANUFACTURER := realme
