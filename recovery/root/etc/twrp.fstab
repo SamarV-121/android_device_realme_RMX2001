@@ -23,6 +23,8 @@ preload_common	/common_preload		ext4		display="preload_common";
 /tee2			emmc	/dev/block/platform/bootdevice/by-name/tee2		flags=display="tee2";backup=1;flashimg=1
 /frp			emmc	/dev/block/platform/bootdevice/by-name/frp		flags=display="frp";backup=1
 /nvdata			ext4	/dev/block/platform/bootdevice/by-name/nvdata		flags=display="nvdata";backup=1
+/mnt/vendor/persist	ext4	/dev/block/platform/bootdevice/by-name/persist	flags=mounttodecrypt
+/persist		ext4	/dev/block/platform/bootdevice/by-name/persist		flags=display="Persist";backup=1
 /metadata		emmc	/dev/block/platform/bootdevice/by-name/metadata
 /cache			ext4	/dev/block/platform/bootdevice/by-name/cache
 /data			ext4	/dev/block/platform/bootdevice/by-name/userdata		flags=fileencryption=aes-256-cts
