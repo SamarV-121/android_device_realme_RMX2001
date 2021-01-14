@@ -44,6 +44,15 @@ service gatekeeper-1-0 /sbin/android.hardware.gatekeeper@1.0-service
     disabled
     seclabel u:r:recovery:s0
 
+service vendor.vibrator-1-0 /sbin/android.hardware.vibrator@1.0-service
+    class hal
+    user root
+    group root input
+    seclabel u:r:recovery:s0
+
+on boot
+    start vendor.vibrator-1-0
+
 on property:hwservicemanager.ready=true
     start hal_cryptoeng_oppo
     start mobicore

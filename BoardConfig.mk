@@ -153,6 +153,7 @@ TARGET_USES_LOGD := true
 TARGET_USES_MKE2FS := true
 TW_EXCLUDE_TWRPAPP := true
 TW_INCLUDE_LOGICAL := oppo_product oppo_engineering preload_common
+TW_SUPPORT_INPUT_1_2_HAPTICS := true
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
