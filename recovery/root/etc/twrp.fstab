@@ -30,6 +30,6 @@ preload_common	/common_preload		ext4		display="preload_common";
 /data			ext4	/dev/block/platform/bootdevice/by-name/userdata		flags=fileencryption=aes-256-cts
 
 /external_sd		auto	/dev/block/mmcblk1p1	/dev/block/mmcblk1		flags=display="External SDcard";storage;wipeingui;removable;backup=0
-/usbotg			auto    /dev/block/sda1		/dev/block/sda			flags=display="Usb-Otg";storage;removable;backup=0
+/usbotg			auto    /dev/block/sda1		/dev/block/sda			flags=display="Usb-Otg";storage;wipeingui;removable;backup=0
 /dtbo emmc /dev/block/platform/bootdevice/by-name/dtbo flags=display="DTBo";backup=1
 /vbmeta emmc /dev/block/platform/bootdevice/by-name/vbmeta flags=display="VBmeta";backup=1
