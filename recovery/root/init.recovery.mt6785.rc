@@ -51,8 +51,15 @@ service vendor.vibrator-1-0 /system/bin/android.hardware.vibrator@1.0-service
     group root input
     seclabel u:r:recovery:s0
 
+service change-product /system/bin/change-product.sh
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
 on boot
     start vendor.vibrator-1-0
+    start change-product
 
 on property:hwservicemanager.ready=true
     start hal_cryptoeng_oppo
