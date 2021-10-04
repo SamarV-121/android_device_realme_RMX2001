@@ -17,9 +17,6 @@
 # Inherit from common tree
 -include device/realme/mt6785-common/BoardConfigCommon.mk
 
-# Assertation
-TARGET_OTA_ASSERT_DEVICE := RMX2001
-
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/realme/RMX2001
 TARGET_KERNEL_CONFIG := RMX2001_defconfig
