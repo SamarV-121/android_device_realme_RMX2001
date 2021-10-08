@@ -24,6 +24,9 @@ $(call inherit-product, device/realme/RMX2001/device.mk)
 # Call proprietary blob setup
 $(call inherit-product, vendor/realme/RMX2001/RMX2001-vendor.mk)
 
+# Inherit some extra fuckery
+$(call inherit-product, vendor/extra/product.mk)
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := RMX2001
 PRODUCT_DEVICE := RMX2001
